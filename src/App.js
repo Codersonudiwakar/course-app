@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
+import { Route, Routes } from 'react-router-dom';
+import AddCourse from './AddCourse';
+import ListInstance from './ListInstance';
+import ListCourse from './ListCourse';
+import AddInstance from './AddInstance';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ViewCourse from './ViewCourse';  
+import ViewInstance from './ViewInstance';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <ToastContainer position="top-right" />
+      <Routes>
+      <Route path='/instances/:year/:sem/:id' element={<ViewInstance />} />
+
+        <Route path="/courses/:id" element={<ViewCourse />} />
+        <Route path="/" element={<ListInstance />} />
+        <Route path="/add-course" element={<AddCourse />} />
+        <Route path="/add-instance" element={<AddInstance />} />
+        <Route path="/list-courses" element={<ListCourse />} />
+        <Route path="/list-instances" element={<ListInstance />} />
+      </Routes>
     </div>
   );
 }

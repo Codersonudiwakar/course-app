@@ -11,3 +11,357 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Buttons */
+.nav-button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-button:hover {
+  background-color: #777;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-links {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+  }
+
+  .nav-button {
+      width: 100%;
+      text-align: left;
+  }
+}
+a{
+  list-style: none;
+  text-decoration: none;
+}
+.course-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.delivery-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* Define a unique class for your table */
+.course-instance-table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+/* Style the table header */
+.course-instance-table thead th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style the table body */
+.course-instance-table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Specific column width styling */
+.course-instance-table .course-title {
+  width: 50%;
+}
+
+.course-instance-table .year-sem,
+.course-instance-table .course-code,
+.course-instance-table .actions {
+  width: calc(50% / 3); /* 50% divided equally among the three columns */
+  text-align: center;
+}
+
+/* Add some hover effects for the action icons */
+.course-instance-table .actions svg {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.course-instance-table .actions svg:hover {
+  color: #007bff;
+}
+
+/* Optional: Add a unique color theme */
+.course-instance-table {
+  --header-bg-color: #e9ecef;
+  --row-hover-color: #f1f1f1;
+}
+
+.course-instance-table thead th {
+  background-color: var(--header-bg-color);
+}
+
+.course-instance-table tbody tr:hover {
+  background-color: var(--row-hover-color);
+}
+
+
+/* Define a unique class for the form container */
+.instance-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 10px; /* Adjust the space between elements */
+  margin-bottom: 20px; /* Space between form and table */
+}
+
+/* Style the labels */
+.instance-container label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Style the input and select fields */
+.instance-container input,
+.instance-container select {
+  margin-left: 5px; /* Space between label text and input/select */
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Style the button */
+.instance-container button {
+  padding:10px;
+  border-radius: 4px;
+  width: 200px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.instance-container button:hover {
+  background-color: #0056b3;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-table th, .course-table td {
+  text-align: left;
+  padding: 8px;
+}
+
+.course-title {
+  width: 70%;
+}
+
+.course-code, .course-action {
+  width: 15%;
+  text-align: center;
+}
+
+.course-action svg {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.view-course-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.view-course-container .course-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 95%;
+}
+.view-course-container .course-code {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.view-course-container.course-description {
+  line-height: 1.6;
+}
+
+.course-table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 10px;
+}
+.course-table thead th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+}
+
+.course-table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.course-table .course-title {
+  width: 70%;
+}
+
+.course-table .course-code,
+.course-table .actions {
+  width: calc(30% / 3); 
+  text-align: center;
+}
+
+.course-table .actions svg {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.course-table .actions svg:hover {
+  color: #007bff;
+}
+
+.course-table {
+  --header-bg-color: #e9ecef;
+  --row-hover-color: #f1f1f1;
+}
+
+.course-table thead th {
+  background-color: var(--header-bg-color);
+}
+
+.course-table tbody tr:hover {
+  background-color: var(--row-hover-color);
+}
+.action-icon{
+  font-size: 30px;
+}
